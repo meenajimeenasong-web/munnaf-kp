@@ -1,130 +1,248 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Join Telegram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Pixel Code -->
+<title>Stock Market Education | Telegram</title>
+
+<meta name="description" content="Learn stock market basics with educational resources and learning discussions.">
+
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)}
+(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1358919202868788');
-fbq('track', 'PageView');
+
+fbq('init','1358919202868788');
+fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1358919202868788&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #061a3a, #0a4a8a);
-  }
-  .card {
-    width: 100%;
-    max-width: 450px;
-    background: #061226;
-    border-radius: 24px;
-    padding: 38px 38px 28px;
-    text-align: center;
-    box-shadow: 0 20px 50px rgba(0,0,0,.45);
-  }
-  .avatar {
-    width: 112px; height: 112px;
-    border-radius: 50%;
-    border: 4px solid #00e5ff;
-    object-fit: cover;
-    background: #123;
-  }
-  h1 { color: #fff; font-size: 26px; margin: 26px 0 28px; }
-  .btn {
-    display: block;
-    padding: 18px;
-    border-radius: 40px;
-    background: linear-gradient(90deg, #00e5ff, #00ffa6);
-    color: #000;
-    font-weight: bold;
-    font-size: 19px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform .15s;
-  }
-  .btn:hover { transform: scale(1.03); }
-  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-  ul { list-style: none; margin: 28px 0; color: #d6e4f5; font-size: 20px; }
-  li { margin: 14px 0; }
-  .redirect { color: #fff; font-size: 21px; margin-top: 26px; font-weight: bold; }
-  .disclaimer { color: #7b8794; font-size: 14px; margin-top: 18px; line-height: 1.4; }
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1358919202868788&ev=PageView&noscript=1"/>
+</noscript>
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  font-family:Arial,sans-serif;
+  color:white;
+  background:
+  radial-gradient(circle at top,#173d65 0%,transparent 50%),
+  linear-gradient(135deg,#030916,#071d36,#020713);
+}
+
+.card {
+  width:100%;
+  max-width:460px;
+  padding:35px 26px;
+  text-align:center;
+  border-radius:25px;
+  background:linear-gradient(145deg,#102744,#061326);
+  border:1px solid rgba(224,190,105,.4);
+  box-shadow:0 20px 65px rgba(0,0,0,.55);
+}
+
+.logo {
+  width:115px;
+  height:115px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #d9b45b;
+  box-shadow:0 0 25px rgba(217,180,91,.25);
+  margin-bottom:20px;
+}
+
+.vip {
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:30px;
+  color:#f7d889;
+  background:#243a53;
+  border:1px solid #b89549;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+h1 {
+  font-size:29px;
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.subtitle {
+  color:#bdcde0;
+  font-size:14px;
+  line-height:1.7;
+  margin-bottom:22px;
+}
+
+.line {
+  width:75px;
+  height:3px;
+  margin:20px auto;
+  background:linear-gradient(90deg,#a47b35,#ffe5a0);
+  border-radius:10px;
+}
+
+.section-title {
+  color:#f4d48d;
+  font-size:16px;
+  margin:20px 0;
+}
+
+.features {
+  list-style:none;
+  text-align:left;
+  margin:20px 0;
+}
+
+.features li {
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.08);
+  padding:15px;
+  margin:11px 0;
+  border-radius:13px;
+  color:#e4edf7;
+  font-size:14px;
+}
+
+.btn {
+  display:block;
+  width:100%;
+  padding:18px 12px;
+  margin:20px 0;
+  border-radius:40px;
+  background:linear-gradient(90deg,#d5ad57,#ffe6a0,#c99b42);
+  color:#111827;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:bold;
+  letter-spacing:1px;
+  box-shadow:0 8px 25px rgba(214,174,82,.2);
+  transition:.2s;
+}
+
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(214,174,82,.3);
+}
+
+.btn:focus-visible {
+  outline:3px solid white;
+  outline-offset:4px;
+}
+
+.disclaimer {
+  margin-top:22px;
+  color:#aab8c9;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.footer {
+  margin-top:20px;
+  color:#8296ae;
+  font-size:11px;
+}
+
 </style>
 </head>
+
 <body>
-  <main class="card">
-    <img class="avatar"
-         src="https://drive.google.com/thumbnail?id=1bfeTbTuJNc0s4d7mg2v5boqZ01YDUzUm&sz=w400"
-         alt="Profile photo">
-    <h1>YOUR NAME HERE</h1>
 
-    <a id="join-btn-1" class="btn join-btn" data-event="Subscribe"
-       href="https://t.me/+Cn7LxezoM-s2OGJl" target="_self">Join Telegram</a>
+<main class="card">
 
-    <ul>
-      <li>📊 NIFTY · BANKNIFTY · SENSEX</li>
-      <li>✅ DAILY MARKET UPDATES</li>
-      <li>📚 Learn Market Basics</li>
-      <li>🎯 6+ Years Experience</li>
-    </ul>
+  <img
+  class="logo"
+  src="https://drive.google.com/thumbnail?id=1bfeTbTuJNc0s4d7mg2v5boqZ01YDUzUm&sz=w400"
+  alt="Profile image">
 
-    <a id="join-btn-2" class="btn join-btn" data-event="Subscribe"
-       href="https://t.me/+Cn7LxezoM-s2OGJl" target="_self">Join Telegram</a>
+  <div class="vip">PREMIUM LEARNING COMMUNITY</div>
 
-    <p class="redirect" id="redirect">Redirecting in 60s...</p>
-    <p class="disclaimer">Disclaimer: This is for educational purposes only. Trading involves risk of loss. Past performance does not guarantee future results.</p>
-  </main>
+  <h1>YOUR NAME HERE</h1>
+
+  <div class="line"></div>
+
+  <p class="subtitle">
+    Welcome to our Stock Market Education Community.
+    Explore educational resources and learn market concepts.
+  </p>
+
+  <a class="btn telegram-btn"
+     href="https://t.me/+Cn7LxezoM-s2OGJl"
+     data-position="top">
+     JOIN TELEGRAM
+  </a>
+
+  <h2 class="section-title">WHAT YOU CAN LEARN</h2>
+
+  <ul class="features">
+    <li>📚 Stock Market Fundamentals</li>
+    <li>📊 Understanding Market Charts</li>
+    <li>📖 Educational Market Concepts</li>
+    <li>🎓 Learning Resources & Discussions</li>
+    <li>💡 Risk Management Basics</li>
+  </ul>
+
+  <div class="line"></div>
+
+  <a class="btn telegram-btn"
+     href="https://t.me/+Cn7LxezoM-s2OGJl"
+     data-position="bottom">
+     JOIN TELEGRAM
+  </a>
+
+  <p class="disclaimer">
+    DISCLAIMER: This community provides educational
+    information only. No investment advice, guaranteed
+    returns or buy/sell recommendations are offered.
+    Financial markets involve risk. Consult a qualified
+    professional before making financial decisions.
+  </p>
+
+  <p class="footer">
+    © 2026 Stock Market Education Community
+  </p>
+
+</main>
 
 <script>
-  const TELEGRAM_URL = "https://t.me/+Cn7LxezoM-s2OGJl";
-  const REDIRECT_SECONDS = 60; // 1 minute total
+document.querySelectorAll(".telegram-btn").forEach(function(btn){
 
-  // Button click par Subscribe event bhejo, phir Telegram kholo
-  document.querySelectorAll(".join-btn").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (window.fbq) fbq("track", "Subscribe");
-      setTimeout(function () { window.location.href = TELEGRAM_URL; }, 300);
-    });
+  btn.addEventListener("click",function(){
+
+    if(typeof fbq === "function"){
+      fbq("trackCustom","TelegramClick",{
+        button_position:btn.dataset.position
+      });
+    }
+
   });
 
-  // Events Setup Tool page ko iframe me kholta hai, wahan redirect band rakho
-  const inIframe = window.self !== window.top;
-  const el = document.getElementById("redirect");
-
-  if (inIframe) {
-    el.style.display = "none";
-  } else {
-    let seconds = REDIRECT_SECONDS;
-    el.textContent = "Redirecting in " + seconds + "s...";
-    const timer = setInterval(function () {
-      seconds--;
-      if (seconds <= 0) {
-        clearInterval(timer);
-        window.location.href = TELEGRAM_URL;
-      } else {
-        el.textContent = "Redirecting in " + seconds + "s...";
-      }
-    }, 1000);
-  }
+});
 </script>
+
 </body>
 </html>
